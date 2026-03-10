@@ -4,7 +4,7 @@ export const menuData = [
     name: "Special Thali",
     price: 100,
     category: "rice",
-    img: "https://images.unsplash.com/photo-1601050690597-df0568f70950"
+    img: "https://tse1.mm.bing.net/th/id/OIP.ZhKbx8qawRKNRPDLhTPu0AHaFf?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const menuData = [
     name: "Veg Thali",
     price: 100,
     category: "rice",
-    img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d"
+    img: "https://th.bing.com/th/id/R.8c29d303a4a2b67067b9b37b38a8930e?rik=0AwhLsInECdb4A&riu=http%3a%2f%2feastindianrecipes.net%2fwp-content%2fuploads%2f2022%2f09%2fHow-to-Make-North-Indian-Thali-Vegetarian-7.jpg&ehk=8hsvv2qJ0ZnSHgEKAYh5KkGTK0MxnGuVe3dGekTKJy8%3d&risl=&pid=ImgRaw&r=0"
   },
   {
     id: 4,
@@ -32,28 +32,28 @@ export const menuData = [
     name: "Chicken Biryani",
     price: 180,
     category: "rice",
-    img: "https://images.unsplash.com/photo-1633945274309-2c16f2b3a0a1"
+    img: "https://foodaazz.com/wp-content/uploads/2023/03/Kolkata-Biryani-chicken-1200x800.jpg"
   },
   {
     id: 6,
     name: "Egg Biryani",
     price: 140,
     category: "rice",
-    img: "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab"
+    img: "https://tse2.mm.bing.net/th/id/OIP.-WI0IQXYIZbLxZ02HvZg3wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     id: 7,
     name: "Fried Rice",
     price: 150,
     category: "rice",
-    img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d"
+    img: "https://tse4.mm.bing.net/th/id/OIP.exCx9PMcCsRSaZp4tjlA2AHaEj?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     id: 8,
     name: "Chicken Fried Rice",
     price: 300,
     category: "rice",
-    img: "https://images.unsplash.com/photo-1605478580703-2f5c0c9c5b5d"
+    img: "https://tse2.mm.bing.net/th/id/OIP.Tuxydx4MdAndH0fcRc6XeAHaLH?w=1250&h=1875&rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     id: 9,
@@ -81,6 +81,6 @@ export const menuData = [
     name: "Tandoori Roti",
     price: 20,
     category: "roti",
-    img: "https://images.unsplash.com/photo-1626078299034-6e0d9a2c8f55"
+    img: "https://tse2.mm.bing.net/th/id/OIP.I9qJcDRnJT84DsljJ5tDeQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
   }
 ];

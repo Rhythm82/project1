@@ -1,73 +1,85 @@
 import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
-const plates = [
-  "Our chefs cook with passion and authentic spices.",
-  "Every dish tells a story of culture and taste.",
-  "Fresh ingredients sourced daily.",
-  "Experience food like never before."
+const stories = [
+  "In our kitchen, every recipe carries the warmth of a Bengali home. From fragrant rice dishes to slow-cooked curries, we prepare food the traditional way — with patience, love, and authentic spices.",
+  "Our journey began with a simple dream: to bring the comforting taste of homemade Bengali food to every guest. Every plate reflects culture, heritage, and the joy of sharing meals together.",
+  "We believe food tastes best when shared with family. That’s why our menu celebrates traditional Bengali flavors that bring people together around the table.",
+  "Fresh ingredients, time-honored recipes, and heartfelt cooking — these are the secrets behind every dish we serve. Each bite is a small celebration of Bengali culinary tradition.",
+  "From festive biryanis to everyday comfort meals, our kitchen keeps alive the flavors passed down through generations of Bengali families.",
 ]
 
 export default function StoryPlates() {
 
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % stories.length)
+    }, 3500)
+
+    return () => clearInterval(interval)
+
+  }, [])
+
   return (
-    <section className="py-24 flex flex-col items-center text-white relative overflow-hidden">
-      {/* Terracotta background effects */}
+
+    <section className="py-24 flex flex-col items-center relative overflow-hidden px-6">
+
+      {/* soft terracotta glow background */}
+
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-80 h-80 bg-orange-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-orange-300/20 rounded-full blur-3xl"></div>
       </div>
 
-      <h2 className="text-5xl md:text-6xl font-bold mb-20 text-orange-700">Our Story</h2>
+      {/* title */}
 
-      <div className="flex flex-wrap justify-center gap-12 px-4 max-w-6xl">
+      <h2 className="text-4xl md:text-5xl font-bold mb-16 text-orange-700">
+        Our Story
+      </h2>
 
-        {plates.map((text, i) => (
+      {/* glass quote card */}
 
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="relative"
-          >
-            {/* Rotating plate - white with terracotta */}
-            <motion.div
-              animate={{ rotateZ: 360 }}
-              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              className="w-64 h-64 md:w-56 md:h-56 rounded-full border-8 border-white shadow-2xl bg-gradient-to-br from-white via-orange-50 to-orange-100 absolute inset-0 flex items-center justify-center pointer-events-none"
-            >
-              {/* Terracotta inner ring */}
-              <div className="absolute inset-4 rounded-full border-4 border-orange-600/40"></div>
-              {/* Decorative dots */}
-              <div className="absolute inset-8 rounded-full border-2 border-dashed border-orange-400/30"></div>
-            </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="relative max-w-3xl w-full 
+        backdrop-blur-xl bg-white/20 
+        border border-white/40 
+        shadow-2xl rounded-3xl 
+        px-10 py-12 text-center"
+      >
 
-            {/* Text content - fixed, doesn't rotate */}
-            <motion.div
-              whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(251,146,60,0.6)" }}
-              className="w-64 h-64 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center text-center p-6 relative z-10 shadow-2xl transition-all duration-300"
-            >
-              <p className="text-gray-800 font-semibold text-sm md:text-base leading-relaxed">{text}</p>
-            </motion.div>
+        {/* top quote */}
 
-            {/* Glowing shine effect moving left to right */}
-            <motion.div
-              animate={{
-                backgroundPosition: ["200% center", "-200% center"]
-              }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="w-64 h-64 md:w-56 md:h-56 rounded-full absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
-              style={{
-                background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
-                backgroundSize: "200% center"
-              }}
-            />
-          </motion.div>
+        <span className="absolute top-4 left-6 text-5xl text-orange-400/40 font-serif">
+          "
+        </span>
 
-        ))}
+        {/* bottom quote */}
 
-      </div>
+        <span className="absolute bottom-4 right-6 text-5xl text-orange-400/40 font-serif">
+          "
+        </span>
+
+        {/* animated text */}
+
+        <motion.p
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed"
+        >
+          {stories[index]}
+        </motion.p>
+
+      </motion.div>
 
     </section>
+
   )
 }

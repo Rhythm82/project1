@@ -65,7 +65,7 @@ export default function Hero() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-24 mb-6"
+            className="w-54 mb-4"
           />
 
           {/* restaurant name */}
@@ -106,7 +106,7 @@ export default function Hero() {
               className="px-10 py-4 rounded-full
               bg-gradient-to-r from-yellow-500 to-orange-500
               text-white font-semibold text-lg
-              shadow-lg hover:shadow-xl transition"
+              shadow-lg hover:shadow-xl transition mb-9"
             >
               View Menu
             </motion.button>

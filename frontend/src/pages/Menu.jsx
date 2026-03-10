@@ -38,7 +38,7 @@ export default function Menu() {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen p-8 bg-gradient-to-br from-orange-50 via-orange-200 to-orange-500 mt-20">
+      <div className="min-h-screen p-8 bg-gradient-to-br from-orange-50 via-orange-200 to-orange-500 bg-white mt-20">
         {/* HEADER */}
 
         <div className="flex justify-between items-center mb-8">

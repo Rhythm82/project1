@@ -53,7 +53,7 @@ body {
 
 /* Shimmer effect for plates */
 .plate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(239, 239, 239, 0.85), transparent);
   background-size: 1000px 100%;
   animation: shimmer 2s infinite;
 }
@@ -102,7 +102,7 @@ body {
 /* Responsive menu icon */
 @media (max-width: 768px) {
   body {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: linear-gradient(135deg, #ffe7c4 0%, #fffacc 50%, #ffffff 100%);
   }
 }
 

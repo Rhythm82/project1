@@ -18,21 +18,20 @@ export default function Gallery() {
 
   return (
 
-    <section className="py-24 overflow-hidden  ">
+    <section className="py-10 overflow-hidden">
 
-      <h2 className="text-4xl font-bold text-center mb-16 text-orange-700">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 text-orange-700">
         Our Delicious Moments
       </h2>
 
       {/* ROW 1 */}
 
       <motion.div
-        className="flex gap-10 mb-14"
-        animate={{ x: ["-10%", "10%"] }}
+        className="flex gap-4 md:gap-10 mb-10"
+        animate={{ x: ["0%", "-50%"] }}
         transition={{
           repeat: Infinity,
-          repeatType: "reverse",
-          duration: 12,
+          duration: 20,
           ease: "linear"
         }}
       >
@@ -41,9 +40,10 @@ export default function Gallery() {
 
           <div
             key={i}
-            className="min-w-[180px] h-[180px] rounded-full 
-            overflow-hidden shadow-xl 
-            border-4 border-white
+            className="min-w-[120px] h-[120px] 
+            md:min-w-[240px] md:h-[230px] 
+            rounded-full overflow-hidden 
+            shadow-lg border-4 border-white
             bg-white/40 backdrop-blur-md"
           >
 
@@ -63,12 +63,11 @@ export default function Gallery() {
       {/* ROW 2 */}
 
       <motion.div
-        className="flex gap-10"
-        animate={{ x: ["10%", "-10%"] }}
+        className="flex gap-4 md:gap-10"
+        animate={{ x: ["-50%", "0%"] }}
         transition={{
           repeat: Infinity,
-          repeatType: "reverse",
-          duration: 12,
+          duration: 20,
           ease: "linear"
         }}
       >
@@ -77,9 +76,10 @@ export default function Gallery() {
 
           <div
             key={i}
-            className="min-w-[180px] h-[180px] rounded-full 
-            overflow-hidden shadow-xl 
-            border-4 border-white
+            className="min-w-[120px] h-[120px] 
+            md:min-w-[240px] md:h-[230px] 
+            rounded-full overflow-hidden 
+            shadow-lg border-4 border-white
             bg-white/40 backdrop-blur-md"
           >
 
